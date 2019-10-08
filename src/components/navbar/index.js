@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">Navbar</a>
+        <button className="navbar-brand">Navbar</button>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -10,16 +10,16 @@ const Navbar = () => (
         <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
                 <li className="nav-item active">
-                    <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
+                    <button className="nav-link">Home <span className="sr-only">(current)</span></button>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Features</a>
+                    <button className="nav-link">Features</button>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link" href="#">Pricing</a>
+                    <button className="nav-link">Pricing</button>
                 </li>
                 <li className="nav-item">
-                    <a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Disabled</a>
+                    <button className="nav-link disabled" tabIndex="-1" aria-disabled="true">Disabled</button>
                 </li>
             </ul>
         </div>
