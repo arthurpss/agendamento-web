@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+
 import Navbar from "../navbar";
-import Carousel from "../carousel";
+import Routes from "../../routes";
 
 const App = () => (
     <div className="App">
       <Navbar/>
-      <Carousel/>
+      <Routes/>
     </div>
 );
 
