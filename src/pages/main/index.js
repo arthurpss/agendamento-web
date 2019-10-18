@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Carousel from "../../components/carousel";
 
 export default class Main extends Component {
@@ -10,7 +10,5 @@ export default class Main extends Component {
             <Carousel/>
             <h1>Materia WEB</h1>
         </div>
-
-
     }
 }
