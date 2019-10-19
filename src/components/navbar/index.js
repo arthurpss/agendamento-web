@@ -14,11 +14,13 @@ const Navbar = () => (
             <ul className="navbar-nav">
 
                 <li className="nav-item">
-                    <a href={/agendar/} className="nav-link">Agendar</a>
+                    <a href="#agendar" className="nav-link">Agendar</a>
                 </li>
 
             </ul>
         </div>
+
+        <a href="#informacoes"><b>Informações</b></a>
 
     </nav>
 );
