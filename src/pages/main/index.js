@@ -8,7 +8,6 @@ export default class Main extends Component {
     render() {
         return <div>
             <Carousel/>
-            <h1>Materia WEB</h1>
         </div>
     }
 }
