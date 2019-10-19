@@ -20,10 +20,10 @@ const especialidades = [
 ];
 
 const Especialidades = () => especialidades.map(especialidade => (
-    <li>
-        {especialidade.titulo}
+    <li style={{marginTop: "20px"}}>
+        <span>{especialidade.titulo}</span>
         <br/>
-        (especialidade.descricao}
+        <span style={{marginTop: "5px"}}>{especialidade.descricao}</span>
     </li>
 ));
 
