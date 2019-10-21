@@ -2,7 +2,7 @@ import React from "react"
 import "./styles.css"
 
 const Filtros = () => (
-    <div className="container" id="agendar">
+    <div className="container" id="filtros">
         <div className="row">
             <div className="col-6 dropdown">
                 <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"

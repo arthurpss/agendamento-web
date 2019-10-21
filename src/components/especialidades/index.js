@@ -3,11 +3,11 @@ import React from "react"
 const especialidades = [
     {
         titulo: "Pediatria",
-        descricao: "Cuida de criança"
+        descricao: "Cuida de criança",
     },
     {
         titulo: "Urologia",
-        descricao: "Cuida de pinto"
+        descricao: "Cuida de pênis"
     },
     {
         titulo: "Neurologia",
@@ -20,8 +20,8 @@ const especialidades = [
 ];
 
 const Especialidades = () => especialidades.map(especialidade => (
-    <li style={{marginTop: "20px"}}>
-        <span>{especialidade.titulo}</span>
+    <li className="list-group-item" style={{marginTop: "20px"}}>
+        <span><b>{especialidade.titulo}</b></span>
         <br/>
         <span style={{marginTop: "5px"}}>{especialidade.descricao}</span>
     </li>

@@ -12,8 +12,12 @@ export default class Main extends Component {
         return <div>
             <Carousel/>
             <Filtros/>
-            <Medicos/>
-            <ul id="informacoes" style={{textAlign: "center", marginTop: "10px"}}>
+            <div className="container" id="agendar">
+                <Medicos/>
+            </div>
+            <ul id="informacoes"
+                style={{textAlign: "center", marginTop: "10px"}}
+                className="list-group">
                 <Especialidades/>
             </ul>
         </div>
