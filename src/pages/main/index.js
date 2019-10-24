@@ -3,6 +3,7 @@ import Carousel from "../../components/carousel";
 import Filtros from "../../components/filtros"
 import Especialidades from "../../components/especialidades";
 import Medicos from "../../components/medicos"
+import ServicosPrecos from "../../components/ServicosPrecos"
 
 export default class Main extends Component {
 
@@ -11,6 +12,7 @@ export default class Main extends Component {
     render() {
         return <div>
             <Carousel/>
+            <ServicosPrecos/>
             <Filtros/>
             <div className="container" id="agendar">
                 <Medicos/>
