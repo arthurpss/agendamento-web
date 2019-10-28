@@ -7,8 +7,6 @@ import ServicosPrecos from "../../components/ServicosPrecos"
 
 export default class Main extends Component {
 
-    //componentDidMount()
-
     render() {
         return <div>
             <Carousel/>
