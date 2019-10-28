@@ -10,7 +10,10 @@ export default class Main extends Component {
     render() {
         return <div>
             <Carousel/>
-            <ServicosPrecos/>
+            <div className="card-group"
+                 style={{textAlign: "center", marginTop: "10px"}}>
+                <ServicosPrecos/>
+            </div>
             <Filtros/>
             <div className="container" id="agendar">
                 <Medicos/>

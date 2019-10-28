@@ -1,38 +1,47 @@
 import React from "react"
 
-const Serviços = [
+const Servicos = [
     {
         titulo: "Pilates",
-        preço: 100
+        preco: 100
     },
     {
         titulo: "Ortopedia",
-        preço: 200
+        preco: 200
     },
     {
         titulo: "Traumatologia",
-        preço: 300
+        preco: 300
     },
     {
         titulo: "Fisioterapia",
-        preço: 400
+        preco: 400
     },
     {
         titulo: "Fisiatria",
-        preço: 500
+        preco: 500
     },    
     {
         titulo: "Exame de Eletroneuromiogfrafia",
-        preço: 600
+        preco: 600
     }
 ];
 
-const Services = () => Serviços.map(serviço => (
-    <li className="list-group-item" style={{marginTop: "20px"}}>
-        <span><b>{serviço.titulo}</b></span>
-        <br/>
-        <span style={{marginTop: "5px"}}>{serviço.preço}</span>
-    </li>
+// const Services = () => Servicos.map(serviço => (
+//     <li className="list-group-item" style={{marginTop: "20px"}}>
+//         <span><b>{serviço.titulo}</b></span>
+//         <br/>
+//         <span style={{marginTop: "5px"}}>{serviço.preço}</span>
+//     </li>
+// ));
+
+const Services = () => Servicos.map(servico => (
+    <div className="card">
+        <div className="card-body">
+            <h5 className="card-title">{servico.titulo}</h5>
+            <p className="card-text">{servico.preco}</p>
+        </div>
+    </div>
 ));
 
 export default Services;
