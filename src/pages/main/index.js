@@ -4,6 +4,7 @@ import Filtros from "../../components/filtros"
 import Especialidades from "../../components/especialidades";
 import Medicos from "../../components/medicos"
 import ServicosPrecos from "../../components/ServicosPrecos"
+import Convenios from "../../components/Convenios"
 
 export default class Main extends Component {
 
