@@ -2,14 +2,15 @@ import React from "react";
 import Calendar from "react-calendar";
 import "./styles.css";
 
-const Calendario = () => (
-    <div>
-    <Calendar className="calendario"
-              locale="pt-BR"/>
+const Calendario = () => {
+    return (
         <div>
-            Foto do médico
+            <Calendar className="calendario"
+                      locale="pt-BR"/>
+            <div>
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 export default Calendario;

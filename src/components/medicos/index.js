@@ -5,24 +5,28 @@ import Rating from '@material-ui/lab/Rating';
 const Medicos = () => {
     const [medicos, setNota] = useState([
         {
+            id: 0,
             nome: "Dr. César",
             especialidade: "Pediatria",
             nota: 3,
             icone: medico_icone
         },
         {
+            id: 1,
             nome: "Dr. Rodrigo",
             especialidade: "Urologia",
             nota: 2,
             icone: medico_icone
         },
         {
+            id: 2,
             nome: "Dr. Arthur",
             especialidade: "Neurologia",
             nota: 3,
             icone: medico_icone
         },
         {
+            id: 3,
             nome: "Dr. Murilo",
             especialidade: "Geral",
             nota: 1,
@@ -53,7 +57,7 @@ const Medicos = () => {
                         />
                     </div>
                     <div className="col-1">
-                        <a href={/agendar/}>
+                        <a href={"/agendar?medico=" + medico.id}>
                             Agendar
                         </a>
                     </div>
