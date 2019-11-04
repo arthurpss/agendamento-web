@@ -1,8 +1,10 @@
 import React, {useState} from "react"
+import { withRouter } from 'react-router-dom';
 import medico_icone from "../../assets/icons/medico.svg";
 import Rating from '@material-ui/lab/Rating';
+import './style.css';
 
-const Medicos = () => {
+const Medicos = ({ history }) => {
     const [medicos, setNota] = useState([
         {
             id: 0,
@@ -57,9 +59,14 @@ const Medicos = () => {
                         />
                     </div>
                     <div className="col-1">
-                        <a href={"/agendar?medico=" + medico.id}>
+                        <button className="btn btn-primary" onClick={event => history.push({
+                            pathname: '/agendar',
+                            state: {
+                                medico: medico
+                            }
+                        })}>
                             Agendar
-                        </a>
+                        </button>
                     </div>
                 </div>
             )
@@ -67,4 +74,4 @@ const Medicos = () => {
     )
 };
 
-export default Medicos;
+export default withRouter(Medicos);
