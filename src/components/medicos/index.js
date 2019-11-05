@@ -11,28 +11,40 @@ const Medicos = ({ history }) => {
             nome: "Dr. César",
             especialidade: "Pediatria",
             nota: 3,
-            icone: medico_icone
+            icone: medico_icone,
+            horarios_disponiveis: [
+                "09:00", "11:00", "13:30", "15:30", "17:00"
+            ]
         },
         {
             id: 1,
             nome: "Dr. Rodrigo",
             especialidade: "Urologia",
             nota: 2,
-            icone: medico_icone
+            icone: medico_icone,
+            horarios_disponiveis: [
+                "09:00", "11:00", "13:30", "15:30", "17:00"
+            ]
         },
         {
             id: 2,
             nome: "Dr. Arthur",
             especialidade: "Neurologia",
             nota: 3,
-            icone: medico_icone
+            icone: medico_icone,
+            horarios_disponiveis: [
+                "09:00", "11:00", "13:30", "15:30", "17:00"
+            ]
         },
         {
             id: 3,
             nome: "Dr. Murilo",
             especialidade: "Geral",
             nota: 1,
-            icone: medico_icone
+            icone: medico_icone,
+            horarios_disponiveis: [
+                "09:00", "11:00", "13:30", "15:30", "17:00"
+            ]
         }
     ]);
 

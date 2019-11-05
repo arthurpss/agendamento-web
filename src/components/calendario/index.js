@@ -7,8 +7,6 @@ const Calendario = () => {
         <div>
             <Calendar className="calendario"
                       locale="pt-BR"/>
-            <div>
-            </div>
         </div>
     );
 };
