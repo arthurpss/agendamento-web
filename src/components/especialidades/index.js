@@ -2,6 +2,7 @@ import React from "react"
 
 const especialidades = [
     {
+
         titulo: "Pediatria",
         descricao: "Cuida de criança",
     },
@@ -27,4 +28,4 @@ const Especialidades = () => especialidades.map(especialidade => (
     </li>
 ));
 
-export default Especialidades;
+export {Especialidades, especialidades};

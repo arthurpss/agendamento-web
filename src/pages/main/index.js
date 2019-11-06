@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Carousel from "../../components/carousel";
 import Filtros from "../../components/filtros"
-import Especialidades from "../../components/especialidades";
+import {Especialidades} from "../../components/especialidades";
 import Medicos from "../../components/medicos"
 import ServicosPrecos from "../../components/ServicosPrecos"
 

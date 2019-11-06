@@ -1,20 +1,27 @@
 import React from "react"
 import "./styles.css"
+import {especialidades} from "../especialidades";
 
 const Filtros = () => (
     <div className="container" id="filtros">
         <div className="row">
-            <div className="col-6 dropdown">
-                <button className="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Especialidades
-                </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <button className="dropdown-item">Pediatria</button>
-                    <button className="dropdown-item">Urologia</button>
-                    <button className="dropdown-item">Neurologia</button>
-                    <button className="dropdown-item">Geral</button>
-                </div>
+            <div className="col-6">
+                <form>
+                    <div className="form-group">
+                        <label htmlFor="form-control">
+                            Especialidade
+                        </label>
+                        <select className="form-control" id="form-control">
+                            {
+                                especialidades.map(especialidade =>
+                                    <option>
+                                        {especialidade.titulo}
+                                    </option>
+                                )
+                            }
+                        </select>
+                    </div>
+                </form>
             </div>
             <div className="col-6">
                 <a href="#informacoes"><b>Informações</b></a>
