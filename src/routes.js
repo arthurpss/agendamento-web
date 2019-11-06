@@ -1,10 +1,6 @@
 import React from 'react';
-
 import history from './history';
-
-// import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {Router, Switch, Route} from 'react-router-dom';
-
 import Main from "./pages/main";
 import Agendar from "./pages/agendar";
 
