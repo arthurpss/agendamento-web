@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Calendario from "../../components/calendario";
+import "./styles.css";
 
 export default class Agendar extends Component {
 
@@ -17,27 +18,81 @@ export default class Agendar extends Component {
             motivo: "xs"
         };
 
+        const planos = [
+            "Nenhum",
+            "Amil",
+            "Brasdesco",
+            "GEAP",
+            "X"
+        ];
+
         return (
-            <div>
-                <div>
-                    <img src={agendamento.medico.icone} alt="Ícone do médico"/>
-                    <span> {agendamento.medico.nome} </span>
-                </div>
-                <Calendario/>
+            <div className="container">
                 <form>
-                    <div className="form-group">
-                        <label htmlFor="form-control">
-                            Horário
-                        </label>
-                        <select className="form-control" id="form-control">
-                            {
-                                agendamento.medico.horarios_disponiveis.map(horario =>
-                                    <option>
-                                        {horario}
-                                    </option>
-                                )
-                            }
-                        </select>
+                    <div className="row">
+                        <div className="col">
+                            <img src={agendamento.medico.icone} alt="Ícone do médico"/>
+                            <span> {agendamento.medico.nome} </span>
+                            <Calendario/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col">
+                            <div className="form-group">
+                                <label htmlFor="form-control">
+                                    Horário
+                                </label>
+                                <select className="form-control" id="form-control" required>
+                                    {
+                                        agendamento.medico.horarios_disponiveis.map(horario =>
+                                            <option>
+                                                {horario}
+                                            </option>
+                                        )
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div className="col centralizado">
+                            <div className="form-check">
+                                <input className="form-check-input"
+                                       type="checkbox" value=""
+                                       id="primeira-consulta" required/>
+                                <label className="form-check-label"
+                                       htmlFor="primeira-consulta">Primeira consulta?</label>
+                            </div>
+                        </div>
+                        <div className="col centralizado">
+                            <button className="btn btn-primary">
+                                Marcar
+                            </button>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="form-group col">
+                            <label htmlFor="form-control">
+                                Plano / Convênio
+                            </label>
+                            <select className="form-control" id="form-control" required>
+                                {
+                                    planos.map(plano =>
+                                        <option>
+                                            {plano}
+                                        </option>
+                                    )
+                                }
+                            </select>
+                        </div>
+                        <div className="col">
+                            <div className="form-group">
+                                <label htmlFor="motivo">Motivo</label>
+                                <input type="text" name="motivo" id="motivo"
+                                       className="form-control" aria-describedby="motivo-help"/>
+                                <small id="motivo-help" className="form-text text-muted">
+                                    Se achar necessário, descreva o motivo da consulta
+                                </small>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
