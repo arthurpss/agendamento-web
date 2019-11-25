@@ -1,11 +1,11 @@
 .ServicosPrecos {
     width: 100%;
-    background-color: lightblue;
     text-align: center;
     
 }
 
-#precos h5 {
+body{
+    background-color: rgb(164, 192, 211);
 
 }
 
@@ -14,5 +14,5 @@
 }
 
 .list-group-item span:last-child {
-    color: #007bff;;
+    color: #007bff;
 }
