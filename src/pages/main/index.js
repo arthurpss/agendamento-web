@@ -9,7 +9,7 @@ export default class Main extends Component {
     render() {
         return <div>
             <Carousel/>
-            <div className="card-group"
+            <div className="card-group" id="precos"
                  style={{textAlign: "center", marginTop: "10px"}}>
                 <ServicosPrecos/>
             </div>

@@ -1,0 +1,18 @@
+.ServicosPrecos {
+    width: 100%;
+    background-color: lightblue;
+    text-align: center;
+    
+}
+
+#precos h5 {
+
+}
+
+.card-text {
+    color: #007bff !important;
+}
+
+.list-group-item span:last-child {
+    color: #007bff;;
+}

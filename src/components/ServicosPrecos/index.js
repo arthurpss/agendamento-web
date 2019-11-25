@@ -1,29 +1,30 @@
 import React from "react"
+import "./styles.css"
 
 const Servicos = [
     {
         titulo: "Pilates",
-        preco: 100
+        preco: 'R$ 100'
     },
     {
         titulo: "Ortopedia",
-        preco: 200
+        preco: 'R$ 200'
     },
     {
         titulo: "Traumatologia",
-        preco: 300
+        preco: 'R$ 300'
     },
     {
         titulo: "Fisioterapia",
-        preco: 400
+        preco: 'R$ 400'
     },
     {
         titulo: "Fisiatria",
-        preco: 500
+        preco: 'R$ 500'
     },    
     {
-        titulo: "Exame de Eletroneuromiogfrafia",
-        preco: 600
+        titulo: "Psicodiagnóstico",
+        preco: 'R$ 600'
     }
 ];
 
