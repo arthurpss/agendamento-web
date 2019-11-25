@@ -9,8 +9,15 @@ body{
 
 }
 
+.card{
+    background-color: whitesmoke;
+    border-style: solid;
+    border-width: medium;
+    border-color: whitesmoke;
+}
+
 .card-text {
-    color: #007bff !important;
+    color: #007bff;
 }
 
 .list-group-item span:last-child {

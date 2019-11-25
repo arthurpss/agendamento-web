@@ -42,6 +42,7 @@ export default class Agendar extends Component {
                                 <label htmlFor="form-control">
                                     Horário
                                 </label>
+                                
                                 <select className="form-control" id="form-control" required>
                                     {
                                         agendamento.medico.horarios_disponiveis.map(horario =>
@@ -63,7 +64,8 @@ export default class Agendar extends Component {
                             </div>
                         </div>
                         <div className="col centralizado">
-                            <button className="btn btn-primary">
+                            <button className="btn btn-primary"
+                            id="botaoMarcar">
                                 Marcar
                             </button>
                         </div>

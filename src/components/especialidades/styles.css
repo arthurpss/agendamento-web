@@ -6,3 +6,8 @@ P{
     color: black;
     font-size: 12pt;
 }
+
+.list-group-item{
+    background-color: whitesmoke;
+    border-width: medium;
+}
