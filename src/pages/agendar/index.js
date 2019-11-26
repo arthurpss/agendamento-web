@@ -1,9 +1,17 @@
 import React, {Component} from 'react';
 import Calendario from "../../components/calendario";
+import iconeMedico from "../../assets/icons/medico.svg";
 import "./styles.css";
 
 export default class Agendar extends Component {
 
+
+ getHorario(e) {
+    console.log(e.target.value)
+ }
+  getData() {
+ alert("sua mae pelada")
+}
     render() {
         const agendamento = {
             medico: this.props.location.state.medico,
@@ -26,14 +34,16 @@ export default class Agendar extends Component {
             "X"
         ];
 
+        
+
         return (
             <div className="container">
                 <form>
                     <div className="row">
                         <div className="col">
-                            <img src={agendamento.medico.icone} alt="Ícone do médico"/>
+                            <img src={iconeMedico} alt="Ícone do médico"/>
                             <span> {agendamento.medico.nome} </span>
-                            <Calendario/>
+                            <Calendario onChange= {this.getData}/>
                         </div>
                     </div>
                     <div className="row">
@@ -42,9 +52,9 @@ export default class Agendar extends Component {
                                 <label htmlFor="form-control">
                                     Horário
                                 </label>
-                                <select className="form-control" id="form-control" required>
+                                <select className="form-control" id="form-control" onChange={this.getHorario} required>
                                     {
-                                        agendamento.medico.horarios_disponiveis.map(horario =>
+                                        agendamento.medico.horario_disponiveis.map(horario =>
                                             <option>
                                                 {horario}
                                             </option>
