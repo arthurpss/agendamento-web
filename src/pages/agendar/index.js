@@ -73,7 +73,8 @@ export default class Agendar extends Component {
                             </div>
                         </div>
                         <div className="col centralizado">
-                            <button className="btn btn-primary">
+                            <button className="btn btn-primary"
+                            id="botaoMarcar">
                                 Marcar
                             </button>
                         </div>
