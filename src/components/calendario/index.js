@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "./styles.css";
-var data = "";
-function getData(e){
-data = e;
-// console.log(e);
-}
-const Calendario = () => {
 
+
+const Calendario = () => {
+    const [data, setData] = useState("");
+    
+function getData(e){
+    setData(e);
+
+    //  console.log("data", data);
+    }
     return (
         <div>
             <Calendar className="calendario"

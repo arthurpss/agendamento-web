@@ -4,9 +4,9 @@ import Rating from '@material-ui/lab/Rating';
 import './style.css';
 import api from '../../service/api'
 import IconeMedico from '../../assets/icons/medico.svg'
-
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 const Medicos = ({ history }) => {
     toast.configure({
         autoClose: 3000,

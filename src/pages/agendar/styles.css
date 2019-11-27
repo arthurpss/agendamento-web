@@ -6,4 +6,8 @@
 .calendario{
     background-color: whitesmoke;
     font-size: medium;
+    width: 100% !important;
+    height: 320px !important;
+
 }
+
