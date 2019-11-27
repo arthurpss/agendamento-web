@@ -5,7 +5,7 @@ import './style.css';
 import api from '../../service/api'
 import IconeMedico from '../../assets/icons/medico.svg'
 
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const Medicos = ({ history }) => {
     toast.configure({
