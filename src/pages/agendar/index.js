@@ -1,11 +1,11 @@
-import React, { Component, useState } from 'react';
+import React, {Component} from 'react';
 import Moment from 'moment';
 import api from '../../service/api'
 import iconeMedico from "../../assets/icons/medico.svg";
 import "./styles.css";
 import Calendar from "react-calendar";
 import 'react-toastify/dist/ReactToastify.css';
-import { toast } from 'react-toastify';
+import {toast} from 'react-toastify';
 
 export default class Agendar extends Component {
 
@@ -13,11 +13,10 @@ export default class Agendar extends Component {
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        
+
         toast.configure({
             autoClose: 3000,
             draggable: false,
-            //etc you get the idea
         })
     }
 
@@ -35,43 +34,42 @@ export default class Agendar extends Component {
 
 
         var data = {
-            medico : idMedico,
+            medico: idMedico,
             motivo: formData.motivo,
             first: this.refs.check.checked,
             planos: formData.plano,
             date: dataConvertida,
-            namePacient : formData.paciente,
-            hora : formData.horario
-        }
-        console.log("data", data)
+            namePacient: formData.paciente,
+            hora: formData.horario
+        };
+        console.log("data", data);
 
-        if(data.date >= dataAtual) {
+        if (data.date >= dataAtual) {
             this.handleAgendamento(data);
         } else {
             toast.error("Data inválida", {
                 position: toast.POSITION.TOP_CENTER
-              });
+            });
         }
     }
 
-    async handleAgendamento (data) {
+    async handleAgendamento(data) {
         try {
-            const response = await api.post('agendar', data)
-            
+            const response = await api.post('agendar', data);
+
             toast.success("Agendamento realizado com sucesso", {
                 position: toast.POSITION.TOP_CENTER
-              });
-              console.log(response);            
+            });
+            console.log(response);
         } catch (error) {
             toast.error("Erro ao realizar cadastro", {
                 position: toast.POSITION.TOP_CENTER
-              });
-              console.log(error);
+            });
+            console.log(error);
         }
     }
 
     render() {
-
 
 
         var agendamento = {
@@ -87,20 +85,19 @@ export default class Agendar extends Component {
         ];
 
 
-
         return (
             <div className="container">
                 <form onSubmit={e => this.handleSubmit(e, agendamento.medico._id)}>
                     <div className="row">
                         <div className="col">
-                            <img src={iconeMedico} alt="Ícone do médico" />
+                            <img src={iconeMedico} alt="Ícone do médico"/>
                             <span ref="nomeMedico"> {agendamento.medico.nome} </span>
                             <br/>
                             <br/>
                             <div id="Calendario01">
                                 <Calendar className="calendario"
-                                    locale="pt-BR"
-                                    ref="calendar"
+                                          locale="pt-BR"
+                                          ref="calendar"
                                 />
 
                             </div>
@@ -112,7 +109,8 @@ export default class Agendar extends Component {
                                 <label htmlFor="form-control">
                                     Horário
                                 </label>
-                                <select className="form-control" id="form-control" ref="horario" onChange={this.getHorario} required>
+                                <select className="form-control" id="form-control" ref="horario"
+                                        onChange={this.getHorario} required>
                                     {
                                         agendamento.medico.horario_disponiveis.map(horario =>
                                             <option>
@@ -123,25 +121,30 @@ export default class Agendar extends Component {
                                 </select>
                             </div>
                             <div>
-                            <label htmlFor="form-control">
+                                <label htmlFor="form-control">
                                     Nome Paciente
                                 </label>
-                                <input placeholder="Digite seu nome" type="text" className="form-control" id="form-control" ref="paciente" required/>
+                                <input placeholder="Digite seu nome"
+                                       type="text"
+                                       className="form-control"
+                                       id="form-control"
+                                       ref="paciente"
+                                       required/>
                             </div>
                         </div>
                         <div className="col centralizado">
                             <div className="form-check">
                                 <input className="form-check-input"
-                                    type="checkbox"
-                                    ref="check"
-                                    id="primeira-consulta" />
+                                       type="checkbox"
+                                       ref="check"
+                                       id="primeira-consulta"/>
                                 <label className="form-check-label"
-                                    htmlFor="primeira-consulta">Primeira consulta?</label>
+                                       htmlFor="primeira-consulta">Primeira consulta?</label>
                             </div>
                         </div>
                         <div className="col centralizado">
                             <button className="btn btn-primary"
-                                id="botaoMarcar" type="submit">
+                                    id="botaoMarcar" type="submit">
                                 Marcar
                             </button>
                         </div>
@@ -151,7 +154,10 @@ export default class Agendar extends Component {
                             <label htmlFor="form-control">
                                 Plano / Convênio
                             </label>
-                            <select className="form-control" ref="plano" id="form-control" required>
+                            <select className="form-control"
+                                    ref="plano"
+                                    id="form-control"
+                                    required>
                                 {
                                     planos.map(plano =>
                                         <option>
@@ -164,9 +170,13 @@ export default class Agendar extends Component {
                         <div className="col">
                             <div className="form-group">
                                 <label htmlFor="motivo">Motivo</label>
-                                <input type="text" name="motivo" ref="motivo" id="motivo"
-                                    className="form-control" aria-describedby="motivo-help" />
-                                <small id="motivo-help" className="form-text text-muted">
+                                <input type="text"
+                                       name="motivo"
+                                       ref="motivo"
+                                       id="motivo"
+                                       className="form-control" aria-describedby="motivo-help"/>
+                                <small id="motivo-help"
+                                       className="form-text text-muted">
                                     Se achar necessário, descreva o motivo da consulta
                                 </small>
                             </div>
