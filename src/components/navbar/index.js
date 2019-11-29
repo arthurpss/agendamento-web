@@ -20,8 +20,8 @@ const Navbar = () => (
             </ul>
         </div>
 
+        <a href="/agendamentos"><b>Meus agendamentos</b></a>
         <a href="#informacoes"><b>Informações</b></a>
-
     </nav>
 );
 

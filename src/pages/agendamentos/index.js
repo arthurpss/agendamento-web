@@ -4,26 +4,7 @@ export default class Agendamentos extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            emCancelamento: undefined
-        };
-        this.confirmar = this.confirmar.bind(this);
-        this.editar = this.editar.bind(this);
-        this.cancelar = this.cancelar.bind(this);
-    }
 
-    confirmar(agendamento) {
-
-    }
-
-    editar(agendamento) {
-
-    }
-
-    cancelar() {
-    }
-
-    render() {
         // Mock de agendamentos
         const medico = {
             nome: "Médico X",
@@ -32,7 +13,7 @@ export default class Agendamentos extends Component {
             horarios_disponiveis: []
         };
 
-        const agendamentos = [
+        this.agendamentos = [
             {
                 data: "25/12/2019",
                 nome: "Paciente X",
@@ -62,6 +43,40 @@ export default class Agendamentos extends Component {
             }
         ];
 
+        this.confirmar = this.confirmar.bind(this);
+        this.editar = this.editar.bind(this);
+        this.cancelaAgendamento = this.cancelaAgendamento.bind(this);
+        this.confirmaCancelamento = this.confirmaCancelamento.bind(this);
+        this.state = {
+            confirmacao: false,
+            agendamentoACancelar: undefined
+        }
+    }
+
+    confirmar(agendamento) {
+
+    }
+
+    editar(agendamento) {
+
+    }
+
+    cancelaAgendamento(agendamento) {
+        this.setState({agendamento: agendamento});
+    }
+
+    confirmaCancelamento() {
+        this.setState({confirmacao: true});
+        return this.excluiAgendamento();
+    };
+
+    excluiAgendamento() {
+        console.log("Agendamento excluido", this.state.agendamento);
+        this.agendamentos.pop(); //Trocar pelo método splice quando integrar com o backend
+        this.forceUpdate();
+    };
+
+    render() {
         return (
             <div>
                 <table className="table">
@@ -78,7 +93,7 @@ export default class Agendamentos extends Component {
                     </thead>
                     <tbody>
                     {
-                        agendamentos.map(agendamento => {
+                        this.agendamentos.map(agendamento => {
                             return (
                                 <tr>
                                     <th scope="row">{agendamento.data}</th>
@@ -90,7 +105,9 @@ export default class Agendamentos extends Component {
                                                 className="btn btn-danger"
                                                 data-toggle="modal"
                                                 data-target="#modalCancelamento"
-                                                onClick={this.cancelar}>Cancelar
+                                                onClick={() => {
+                                                    this.cancelaAgendamento({agendamento})
+                                                }}>Cancelar
                                         </button>
                                     </td>
                                     <td>
@@ -105,7 +122,7 @@ export default class Agendamentos extends Component {
                                                 className="btn btn-success"
                                                 data-toggle="modal"
                                                 data-target="#modalConfirmacao"
-                                                onClick={this.setState({emCancelamento: {agendamento}})}>Confirmar
+                                        >Confirmar
                                         </button>
                                     </td>
                                 </tr>
@@ -130,7 +147,7 @@ export default class Agendamentos extends Component {
                             <div className="modal-footer">
                                 <button type="button" className="btn btn-primeary" data-dismiss="modal">Voltar</button>
                                 <button type="button" className="btn btn-danger"
-                                        onClick={this.cancelar}>Confirmar
+                                        onClick={this.confirmaCancelamento}>Confirmar
                                 </button>
                             </div>
                         </div>
