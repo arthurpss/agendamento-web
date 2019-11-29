@@ -21,7 +21,6 @@ const Navbar = () => (
         </div>
 
         <a href="/agendamentos"><b>Meus agendamentos</b></a>
-        <a href="#informacoes"><b>Informações</b></a>
     </nav>
 );
 
