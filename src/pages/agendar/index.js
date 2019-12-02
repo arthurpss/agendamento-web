@@ -9,7 +9,6 @@ import {toast} from 'react-toastify';
 
 export default class Agendar extends Component {
 
-
     constructor(props) {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -70,8 +69,6 @@ export default class Agendar extends Component {
     }
 
     render() {
-
-
         var agendamento = {
             medico: this.props.location.state.medico,
         };
@@ -99,7 +96,6 @@ export default class Agendar extends Component {
                                           locale="pt-BR"
                                           ref="calendar"
                                 />
-
                             </div>
                         </div>
                     </div>

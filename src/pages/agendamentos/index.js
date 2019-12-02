@@ -7,7 +7,7 @@ export default class Agendamentos extends Component {
 
         // Mock de agendamentos
         const medico = {
-            nome: "Médico X",
+            nome: "Dr. Arthur",
             especialidade: "Oftalmo",
             nota: 4,
             horarios_disponiveis: []
@@ -72,7 +72,7 @@ export default class Agendamentos extends Component {
 
     excluiAgendamento() {
         console.log("Agendamento excluido", this.state.agendamento);
-        this.agendamentos.pop(); //Trocar pelo método splice quando integrar com o backend
+        this.agendamentos.pop(); //TODO: Trocar pelo método splice quando integrar com o backend
         this.forceUpdate();
     };
 
@@ -86,9 +86,6 @@ export default class Agendamentos extends Component {
                         <th scope="col">Hora</th>
                         <th scope="col">Médico</th>
                         <th scope="col">Especialidade</th>
-                        <th scope="col"/>
-                        <th scope="col"/>
-                        <th scope="col"/>
                     </tr>
                     </thead>
                     <tbody>

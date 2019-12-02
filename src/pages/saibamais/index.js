@@ -94,6 +94,8 @@ export default class Saibamais extends Component {
                                     <td>
                                         <button type="button"
                                                 className="btn btn-success"
+                                                data-toggle="modal"
+                                                data-target="#modalConfirmacao"
                                         >Quero Agendar
                                         </button>
                                     </td>

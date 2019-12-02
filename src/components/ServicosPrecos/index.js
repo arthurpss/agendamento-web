@@ -23,14 +23,6 @@ const Servicos = [
     }
 ];
 
-// const Services = () => Servicos.map(serviço => (
-//     <li className="list-group-item" style={{marginTop: "20px"}}>
-//         <span><b>{serviço.titulo}</b></span>
-//         <br/>
-//         <span style={{marginTop: "5px"}}>{serviço.preço}</span>
-//     </li>
-// ));
-
 const Services = () => Servicos.map(servico => (
     <div className="card">
         <div className="card-body">

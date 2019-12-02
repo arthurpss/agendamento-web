@@ -1,6 +1,20 @@
 import React from "react"
 import "./styles.css"
-import {especialidades} from "../especialidades";
+
+const especialidades = [
+    {
+        titulo: "Pediatria",
+    },
+    {
+        titulo: "Oftalmologia",
+    },
+    {
+        titulo: "Urologia",
+    },
+    {
+        titulo: "Cardiologia",
+    }
+];
 
 const Filtros = () => (
     <div className="container" id="filtros">
