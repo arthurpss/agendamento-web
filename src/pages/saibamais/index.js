@@ -74,7 +74,6 @@ export default class Saibamais extends Component {
                                     <td>{agendamento.nome}</td>
                                     <td>{agendamento.medico.especialidade}</td>
                                     <td>
-                                    <a href="/agendarservico" className="Info-Precos">saiba mais</a> 
                                         <button type="button"
                                                 className="btn btn-success"
                                                 data-toggle="modal"
