@@ -5,6 +5,7 @@ import Main from "./pages/main";
 import Agendar from "./pages/agendar";
 import Agendamentos from "./pages/agendamentos";
 import Saibamais from './pages/saibamais';
+import Agservico from './pages/agendarservico';
 
 const Routes = () => (
     <Router history={history}>
@@ -13,6 +14,7 @@ const Routes = () => (
             <Route path="/agendar" component={Agendar}/>
             <Route path="/agendamentos" component={Agendamentos}/>
             <Route path="/saibamais" component={Saibamais}/>
+            <Route path="/agendarservico" component={Agservico}/>
         </Switch>
     </Router>
 );

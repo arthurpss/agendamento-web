@@ -14,58 +14,40 @@ export default class Saibamais extends Component {
 
         this.agendamentos = [
             {
-                data: "Pilates",
+                srvc: "Pilates",
                 nome: "Dr. Jacó",
                 medico: medico,
-                primeira_consulta: true,
-                motivo: "motivo",
-                plano: "Amil",
-                hora_marcada: "É um método de controle muscular desenvolvido por Joseph Pilates na década de 1920. A maioria dos exercícios é executada com a pessoa deitada. É atualmente uma técnica reconhecida para tratamento e prevenção de problemas na coluna vertebral."
+                desc: "É um método de controle muscular desenvolvido por Joseph Pilates na década de 1920. A maioria dos exercícios é executada com a pessoa deitada. É atualmente uma técnica reconhecida para tratamento e prevenção de problemas na coluna vertebral."
             },
             {
-                data: "Ortopedia",
+                srvc: "Ortopedia",
                 nome: "Dr. Rans Chucrute",
                 medico: medico,
-                primeira_consulta: true,
-                motivo: "motivo",
-                plano: "Amil",
-                hora_marcada: "Especialidade médica que cuida da saúde relacionadas aos elementos do aparelho locomotor, como ossos, músculos, ligamentos e articulações. A traumatologia é a especialidade médica que lida com o trauma do aparelho músculo-esquelético."
+                desc: "Especialidade médica que cuida da saúde relacionadas aos elementos do aparelho locomotor, como ossos, músculos, ligamentos e articulações. A traumatologia é a especialidade médica que lida com o trauma do aparelho músculo-esquelético."
             },
             {
-                data: "Traumatologia",
+                srvc: "Traumatologia",
                 nome: "Dr. Silva",
                 medico: medico,
-                primeira_consulta: true,
-                motivo: "motivo",
-                plano: "Amil",
-                hora_marcada: "Especialidade médica que investiga, diagnostica, trata e acompanha enfermidades relacionadas com fraturas e lesões ósseas e tendinosas provocadas por eventos traumáticos no aparelho músculo-esquelético ou locomotor, composto por: braços, mãos, pés, pernas, coluna , bacia, músculos, tendões e ligamentos."
+                desc: "Especialidade médica que investiga, diagnostica, trata e acompanha enfermidades relacionadas com fraturas e lesões ósseas e tendinosas provocadas por eventos traumáticos no aparelho músculo-esquelético ou locomotor, composto por: braços, mãos, pés, pernas, coluna , bacia, músculos, tendões e ligamentos."
             },
             {
-                data: "Fisioterapia",
+                srvc: "Fisioterapia",
                 nome: "Dr. Kronabuer",
                 medico: medico,
-                primeira_consulta: true,
-                motivo: "motivo",
-                plano: "Amil",
-                hora_marcada: "É uma ciência da saúde aplicada ao estudo, diagnóstico, prevenção e tratamento de disfunções cinéticas funcionais de órgãos e sistemas. Ela estuda, diagnostica, previne e trata os distúrbios, entre outros, cinético-funcionais (da biomecânica e funcionalidade humana) decorrentes de alterações de órgãos e sistemas humanos."
+                desc: "É uma ciência da saúde aplicada ao estudo, diagnóstico, prevenção e tratamento de disfunções cinéticas funcionais de órgãos e sistemas. Ela estuda, diagnostica, previne e trata os distúrbios, entre outros, cinético-funcionais (da biomecânica e funcionalidade humana) decorrentes de alterações de órgãos e sistemas humanos."
             },
             {
-                data: "Fisiatria",
+                srvc: "Fisiatria",
                 nome: "Dr. Santana",
                 medico: medico,
-                primeira_consulta: true,
-                motivo: "motivo",
-                plano: "Amil",
-                hora_marcada: "Tem como foco a funcionalidade do organismo. Esta especialidade médica dedica-se à prevenção, diagnóstico e tratamento não cirúrgico de distúrbios associados à deficiência física em geral. Portanto, esta especialidade atende os pacientes que necessitam de tratamento e reabilitação física."
+                desc: "Tem como foco a funcionalidade do organismo. Esta especialidade médica dedica-se à prevenção, diagnóstico e tratamento não cirúrgico de distúrbios associados à deficiência física em geral. Portanto, esta especialidade atende os pacientes que necessitam de tratamento e reabilitação física."
             },
             {
-                data: "Psicodiagnóstico",
+                srvc: "Psicodiagnóstico",
                 nome: "Dr. Passos",
                 medico: medico,
-                primeira_consulta: true,
-                motivo: "motivo",
-                plano: "Amil",
-                hora_marcada: "É o processo de avaliação onde o principal objetivo é identificar e compreender a queixa e os possíveis distúrbios que o cliente apresenta para que o terapeuta consiga formular hipóteses diagnósticas mais precisas relacionadas às questões levantadas."
+                desc: "É o processo de avaliação onde o principal objetivo é identificar e compreender a queixa e os possíveis distúrbios que o cliente apresenta para que o terapeuta consiga formular hipóteses diagnósticas mais precisas relacionadas às questões levantadas."
             }
         ];
     }
@@ -87,11 +69,12 @@ export default class Saibamais extends Component {
                         this.agendamentos.map(agendamento => {
                             return (
                                 <tr>
-                                    <th scope="row">{agendamento.data}</th>
-                                    <td>{agendamento.hora_marcada}</td>
+                                    <th scope="row">{agendamento.srvc}</th>
+                                    <td>{agendamento.desc}</td>
                                     <td>{agendamento.nome}</td>
                                     <td>{agendamento.medico.especialidade}</td>
                                     <td>
+                                    <a href="/agendarservico" className="Info-Precos">saiba mais</a> 
                                         <button type="button"
                                                 className="btn btn-success"
                                                 data-toggle="modal"
